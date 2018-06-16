@@ -28,11 +28,11 @@ def sendTweet(tweet, hashtags, response):
         ) + " characters"
         return response
 
-    if response_id is None:
+    if response["status_id"] is None:
         status_response = api.update_status(status=combined_status)
     else:
         status_response = api.update_status(
-            status=combined_status, in_reply_to_status_id=response["id"]
+            status=combined_status, in_reply_to_status_id=response["status_id"]
         )
     return {
         "status_id": status_response.id,
@@ -63,7 +63,6 @@ hashtags = input(
 while True:
     tweet = input("What do you want to tweet? ")
     response = sendTweet(tweet, hashtags, response)
-    response_id = response["status_id"]
     print(
         "\nReply to: " + Back.BLUE + Fore.BLACK + " " + str(response["status_id"]) + " "
     )
