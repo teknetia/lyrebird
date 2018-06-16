@@ -24,8 +24,15 @@ def sendTweet(tweet, hashtags, response):
 
     if len(combined_status) >= TWEET_LENGTH_LIMIT:
         print(
-            Fore.RED + "Error! Tweet too long! " + str(len(combined_status))
-        ) + " characters"
+            Fore.RED
+            + "Error! Tweet too long! "
+            + str(len(combined_status))
+            + " characters"
+        )
+        good = combined_status[:TWEET_LENGTH_LIMIT]
+        bad = combined_status[TWEET_LENGTH_LIMIT:]
+        print(good + Back.RED + Fore.BLACK + bad)
+
         return response
 
     if response["status_id"] is None:
@@ -34,6 +41,7 @@ def sendTweet(tweet, hashtags, response):
         status_response = api.update_status(
             status=combined_status, in_reply_to_status_id=response["status_id"]
         )
+
     return {
         "status_id": status_response.id,
         "status_text": status_response.text,
