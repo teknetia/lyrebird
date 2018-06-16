@@ -33,6 +33,15 @@ def sendTweet(tweet, hashtags, response_id):
 
 print("Welcome to " + Back.GREEN + Fore.BLACK + " Lyrebird! ")
 
+print(
+    "Live-tweeting engaged for account "
+    + Back.MAGENTA
+    + Fore.BLACK
+    + "@"
+    + api.me().screen_name
+)
+
+
 hashtags = input(
     Back.BLUE
     + Fore.BLACK
