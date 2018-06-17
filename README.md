@@ -2,6 +2,8 @@
 
 Lyrebird helps you tweet faster and eaier from events by automatically appending the hashtags for you.
 
+![Lyrebird CLI Screenshot](https://raw.githubusercontent.com/teknetia/lyrebird/master/docs/lyrebird-cli.png)
+
 ## Installation
 
 Setup a virtual environment, and install these requirements: 
