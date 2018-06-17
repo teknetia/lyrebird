@@ -27,7 +27,7 @@ python lyrebird-cli.py
 Specify your hashtags: 
 
 ```
-Welcome to  Lyrebird!
+Welcome to 🦉 Lyrebird!
 What hashtags should be appended to each tweet?
 ```
 
@@ -43,4 +43,11 @@ Press enter, and you'll see the resulting Tweet ID from your tweet.
 
 Then, just keep typing!
 
+## System functions
 
+Lyrebird has some built in features that will allow you to perform actions without needing to exit and re-launch the app. Enter any of the following commands at the tweet prompt and the function will activate.
+
+|Command    |Function   |
+|-----------|-----------|
+|`[[reset]]`|Resets the current thread and requests replacement hashtags|
+|`[[quit]]` |Quits Lyrebird|
