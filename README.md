@@ -1,6 +1,6 @@
-# Lyrebird
+# 🐦 Lyrebird
 
-Lyrebird helps you tweet faster and eaier from events by automatically appending the hashtags for you.
+Lyrebird helps you tweet faster and easier from events by automatically appending the hashtags for you.
 
 ![Lyrebird CLI Screenshot](https://raw.githubusercontent.com/teknetia/lyrebird/master/docs/lyrebird-cli.png)
 
@@ -29,7 +29,7 @@ python lyrebird-cli.py
 Specify your hashtags: 
 
 ```
-Welcome to 🦉 Lyrebird!
+Welcome to 🐦 Lyrebird!
 What hashtags should be appended to each tweet?
 ```
 

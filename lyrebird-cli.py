@@ -58,7 +58,7 @@ def sendTweet(tweet, hashtags, response):
     }
 
 
-print("Welcome to " + Back.GREEN + Fore.BLACK + " 🦉 Lyrebird! ")
+print("Welcome to " + Back.GREEN + Fore.BLACK + " 🐦 Lyrebird! ")
 
 print(
     "Live-tweeting engaged for account "
