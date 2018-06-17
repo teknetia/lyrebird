@@ -55,8 +55,9 @@ print(
     "Live-tweeting engaged for account "
     + Back.MAGENTA
     + Fore.BLACK
-    + "@"
+    + " @"
     + api.me().screen_name
+    + " "
 )
 
 
@@ -71,8 +72,29 @@ hashtags = input(
 while True:
     tweet = input("What do you want to tweet? ")
     response = sendTweet(tweet, hashtags, response)
+    print()
     print(
-        "\nReply to: " + Back.BLUE + Fore.BLACK + " " + str(response["status_id"]) + " "
+        Back.BLUE
+        + Fore.BLACK
+        + " Reply to: "
+        + Style.RESET_ALL
+        + " "
+        + str(response["responded_to"])
     )
-    print("ID: " + Back.YELLOW + Fore.BLACK + " " + str(response["status_id"]) + " ")
-    print("Tweet: " + str(response["status_text"]) + "\n")
+    print(
+          Back.MAGENTA
+          + Fore.BLACK
+          + " ID:       "
+          + Style.RESET_ALL
+          + " "
+          + str(response["status_id"])
+    )
+    print(
+          Back.YELLOW
+          + Fore.BLACK
+          + " Tweet:    "
+          + Style.RESET_ALL
+          + " "
+          + str(response["status_text"])
+    )
+    print()
