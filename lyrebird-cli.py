@@ -48,7 +48,7 @@ def sendTweet(tweet, hashtags, response):
         status_response = api.update_status(status=combined_status)
     else:
         status_response = api.update_status(
-            status=combined_status, in_reply_to_status_id=response["status_id"]
+            status=combined_status, in_reply_to_status_id=response["status_id']
         )
 
     return {
@@ -99,7 +99,7 @@ while True:
         print()
         response["status_id"] = None
         hashtags = input(
-            Back.BLUE
+       # THIS SHOULD BE RED!!    Back.BLUE
             + Fore.BLACK
             + " What hashtags should be appended to each tweet? "
             + Style.RESET_ALL
